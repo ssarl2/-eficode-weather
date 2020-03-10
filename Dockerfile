@@ -2,15 +2,14 @@ FROM ubuntu
 
 MAINTAINER hyunbin.park1026@gmail.com
 
+WORKDIR /root/efi/
 
 RUN     apt update && \
         apt install -y vim && \
         apt install -y npm
 
-COPY    backend /root/efi/backend && \
-        frontend /root/efi/frontend
-
-WORKDIR /root/efi/
+COPY    backend backend/ && \
+        frontend frontend/
 
 EXPOSE 9000
 
