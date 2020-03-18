@@ -2,7 +2,8 @@
 
 * Use a private [openweathermap](http://openweathermap.org/) API key.
 * Share my solution via github.
-* Fix code which has some problems with any testing program. (tip: [mocha](https://mochajs.org/)).* Write [ansible](http://docs.ansible.com/ansible/intro.html) playbooks for installing [docker](https://www.docker.com/) and the app itself.
+* Fix code which has some problems with any testing program. (tip: [mocha](https://mochajs.org/)).
+* Write [ansible](http://docs.ansible.com/ansible/intro.html) playbooks for installing [docker](https://www.docker.com/) and the app itself.
 * Use AWS Database.
 * Use descriptive names and add comments in the code when necessary.
 * Set up the weather service in a free cloud hosting service, e.g. [AWS](https://aws.amazon.com/free/) or [Google Cloud](https://cloud.google.com/free/).
