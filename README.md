@@ -1,7 +1,7 @@
 ## https://github.com/eficode/weatherapp
 **[Docker Hub](https://hub.docker.com/repository/docker/ssarl2/myweatherapp)**
 ```
-docker run -it -p 8000:8000 -p 9000:9000 --name weather ssarl2/myweatherapp
+docker run -rm -it -p 8000:8000 -p 9000:9000 --name weather ssarl2/myweatherapp
 ```
 
 * Use a private [openweathermap](http://openweathermap.org/) API key.
@@ -34,9 +34,11 @@ docker run -it -p 8000:8000 -p 9000:9000 --name weather ssarl2/myweatherapp
 
 __Backend__<br>
 KoaJS
+* Needs the 'koa-body' module to fetch data which is the location of users from frontend
 
 __Frontend__<br>
 React
+* Needs to get geolocations 
 
 --------------------------------------------------------------------
 
