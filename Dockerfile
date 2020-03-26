@@ -2,24 +2,23 @@ FROM ubuntu
 
 MAINTAINER hyunbin.park1026@gmail.com
 
-RUN     apt update && \
-        apt install -y vim && \
-        apt install -y npm
+RUN     apt-get update && \
+        apt-get install -y vim && \
+        apt-get install -y npm
 
 WORKDIR /root/efi/
 
 # Do not use && \ for COPY command
-COPY    backend ./backend/
-COPY    frontend ./frontend/
+COPY    eficode ./eficode/
+COPY    changed ./changed/
 COPY    npmi.sh ./npmi.sh
 
 RUN     chmod +x npmi.sh && \
         ./npmi.sh
 
-RUN     rm npmi.sh
-
-RUN     sed -i "s/APPID || '';/APPID || 'a227ab27a77fda78ed5f34e68001cbbd';/g" /root/efi/backend/src/index.js
+COPY    run.sh ./run.sh
+RUN     chmod +x run.sh
 
 EXPOSE 8000 9000
 
-CMD ["bash"]
+CMD ["/root/efi/run.sh"]
