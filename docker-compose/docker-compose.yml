@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  backend:
+    # image: backend
+    build: ./backend
+    ports:
+      - "9000:9000"
+    # networks:
+    #   - hinet
+  frontend:
+    # image: frontend
+    build: ./frontend
+    ports:
+      - "8000:8000"
+#     links:
+#       - backend
+#     networks:
+#       - hinet
+# networks:
+#   hinet:
+#     driver: "bridge"
